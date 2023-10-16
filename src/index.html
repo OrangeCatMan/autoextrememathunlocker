@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: powderblue;
+      text-align: center;
+    }
+    h1 {
+      color: blue;
+    }
+    p {
+      color: red;
+    }
+    button {
+      color: maroon;
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Proxy Tool</h1>
+  <h3>Enter the desired URL below:</h3>
+  <input type="text" id="desired-url">
+  <br><br>
+  <h3>Enter the extrememath URL (leave it blank for default):</h3>
+  <input type="text" id="extrememath-url">
+  <br><br>
+  <button id="access-website">Begin the very high tech procedure</button>
+
+  <p id="output"></p>
+
+  <script>
+    document.getElementById("access-website").addEventListener("click", function () {
+      const desiredUrl = document.getElementById("desired-url").value;
+      const extrememathUrl = document.getElementById("extrememath-url").value || "https://free-education.xyz";
+
+      if (desiredUrl) {
+        const proxyUrl = `${extrememathUrl}/uv.html?site=${desiredUrl}`;
+        window.open(proxyUrl, "_blank");
+        document.getElementById("output").textContent = "Accessing the website...";
+      } else {
+        document.getElementById("output").textContent = "Please enter the desired URL.";
+      }
+    });
+  </script>
+  <br></br>
+  written by chatgpt!
+</body>
+</html>
