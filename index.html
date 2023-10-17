@@ -35,7 +35,7 @@
       const extrememathUrl = document.getElementById("extrememath-url").value || "https://free-education.xyz";
 
       if (desiredUrl) {
-        const proxyUrl = `${extrememathUrl}/uv.html?site=${desiredUrl}`;
+        const proxyUrl = `https://${extrememathUrl}/uv.html?site=${desiredUrl}`;
         window.open(proxyUrl, "_blank");
         document.getElementById("output").textContent = "Accessing the website...";
       } else {
