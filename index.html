@@ -29,20 +29,19 @@
 
   <p id="output"></p>
 
-  <script>
-    document.getElementById("access-website").addEventListener("click", function () {
-      const desiredUrl = document.getElementById("desired-url").value;
-      const extrememathUrl = document.getElementById("extrememath-url").value || "https://free-education.xyz";
+<script>
+  document.getElementById("access-website").addEventListener("click", function () {
+    const desiredUrl = document.getElementById("desired-url").value;
+    const extrememathUrl = document.getElementById("extrememath-url").value || "https://free-education.xyz";
 
-      if (desiredUrl) {
-        const proxyUrl = `${extrememathUrl}/uv.html?site=${desiredUrl}`;
-        window.open(proxyUrl, "_blank");
-        document.getElementById("output").textContent = "Accessing the website...";
-      } else {
-        document.getElementById("output").textContent = "Please enter the desired URL.";
-      }
-    });
-  </script>
+    if (desiredUrl) {
+      const proxyUrl = `${extrememathUrl}/uv.html?site=${desiredUrl}`;
+      window.location.href = proxyUrl; // Redirect the current page to the proxy URL
+    } else {
+      document.getElementById("output").textContent = "Please enter the desired URL.";
+    }
+  });
+</script>
   <br></br>
   written by chatgpt!
 </body>
