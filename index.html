@@ -37,7 +37,8 @@
 
     if (desiredUrl) {
       const proxyUrl = `${extrememathUrl}/uv.html?site=${desiredUrl}`;
-      window.location.href = proxyUrl; // Redirect the current page to the proxy URL
+      window.open(proxyUrl, "_blank"); // Open the proxy URL in a new tab
+      document.getElementById("output").textContent = "Accessing the website...";
     } else {
       document.getElementById("output").textContent = "Please enter the desired URL.";
     }
